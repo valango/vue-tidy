@@ -22,7 +22,7 @@ import tidyOwner from 'vue-tidy'
 
 export default {
   data: () => ({ 
-    unique: undefined   //  Can be use as element ID if we have many instances.
+    unique: undefined   //  Can be used as element ID if we have many instances.
   }),
 
   name: 'Funny',
@@ -40,7 +40,7 @@ export default {
 
   methods: {
     onResize() { 
-      this.debug('onResize')      //  --> 'Funny onResize +0ms' on developer console.
+      this.debug('onResize')      //  --> 'Funny#1 onResize +0ms' on developer console.
       /* do something smarter */ 
     }
   }
@@ -50,9 +50,6 @@ export default {
 
 ## API
 The mix-in is the default export. 
-
-The vue component instance name guessing function is available separately:<br />
-`import guess from 'vue-tidy/guess'`
 
 The mix-in adds the following features to a vue instance:
 
@@ -89,5 +86,10 @@ To do something special during beforeDestroy hook, you may define _**`ownDispose
 If defined, this method will run first and if it returns _boolean `false`_,
 the default _`dispose()`_ will not be called.
 
+### Name guess helper
+There is a helper function used internally for initializing the _`ownClass`_ property.
 
+`guess(vm, [tryHarder : boolean]) : {atring | undefined}`
 
+This function can work without the mix-in as well. It must be imported separately:<br />
+`  import guess from 'vue-tidy/guess'`
