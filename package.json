@@ -1,6 +1,6 @@
 {
   "name": "vue-tidy",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A tiny Vue.js mix-in for event handler management and memory leaks prevention.",
   "main": "index.js",
   "homepage": "",
