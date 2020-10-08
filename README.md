@@ -89,7 +89,7 @@ the default _`dispose()`_ will not be called.
 ### Name guess helper
 There is a helper function used internally for initializing the _`ownClass`_ property.
 
-`guess(vm, [tryHarder : boolean]) : {atring | undefined}`
+`guess(vm, [tryHarder : boolean]) : {string | undefined}`
 
 This function can work without the mix-in as well. It must be imported separately:<br />
 `  import guess from 'vue-tidy/guess'`
