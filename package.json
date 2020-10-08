@@ -1,0 +1,56 @@
+{
+  "name": "vue-tidy",
+  "version": "0.0.1",
+  "description": "A tiny Vue.js mix-in for event handler management and memory leaks prevention.",
+  "main": "index.js",
+  "homepage": "",
+  "repository": "http://github.com/valango/vue-tidy.git",
+  "author": "Villem Alango <villem.alango@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "baseclass",
+    "code",
+    "debug",
+    "debugging",
+    "avoid",
+    "leaks",
+    "event",
+    "handler",
+    "disposal",
+    "mix-in",
+    "mixin",
+    "vue"
+  ],
+  "files": [
+    "index.js",
+    "guess.js"
+  ],
+  "scripts": {
+    "clean": "rimraf *.tmp *.log* reports",
+    "lint": "eslint --ext .js .",
+    "purge": "npm run clean && rimraf node_modules",
+    "test": "jest",
+    "test:coverage": "codecov"
+  },
+  "dependencies": {
+    "keep-tidy": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "^7.11.5",
+    "@vue/cli-service": "^4.5.7",
+    "@vue/test-utils": "^1.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "codecov": "^3.8.0",
+    "eslint": "^7.10.0",
+    "jest": "^26.5.2",
+    "rimraf": "^3.0.2",
+    "vue": "^2.6.12",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "engines": {
+    "node": ">=10.15.1"
+  },
+  "private": false
+}
